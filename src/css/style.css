@@ -84,14 +84,24 @@ li {
     padding: 0 1.5rem;
 }
 
+.container.container-flex {
+    display: flex;
+    position: relative;
+}
+
 /* SECTION */
 
 .section {
     padding: 4rem 0 6rem 0;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    position: relative;
 }
 
 .section.section--beige {
     background: #FCF7F0;
+    max-width: 100%;
 }
 
 .section__title {
@@ -597,6 +607,8 @@ li {
     padding: 4rem;
 
     position: relative;
+
+    width: 49.23%;
 }
 
 .cooperate__item.left {
@@ -833,3 +845,321 @@ li {
 .cost__image {
     margin: 0 0 0 3.5rem;
 }
+
+/* UNIQUE */
+
+.unique {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+}
+
+.unique__headers {
+    width: 32%;
+}
+
+.unique__title {
+    line-height: 58px;
+
+    margin: 0 0 2rem 0;
+}
+
+/* .unique__subtitle {} */
+
+.unique__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.unique__item {
+    display: flex;
+    align-items: center;
+
+    padding: 4rem;
+
+    background: #D3E2FF;
+    border-radius: 60px;
+
+    width: 32%;
+}
+
+.unique__item-image {
+    margin: 0 2rem 0 0;
+}
+
+.unique__item-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.unique__item-content {
+    width: 76%;
+}
+
+.unique__item-title {
+    max-width: 220px;
+    margin: 0 0 2rem 0;
+}
+
+/* .unique__item-text {} */
+
+/* ASSORTMENT */
+
+.section--width {
+    max-width: 1765px;
+    padding-left: 15.5rem;
+    background: #FCF7F0;
+    border-radius: 60px 0px 0px 60px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.assortment {
+    position: relative;
+    z-index: 5;
+
+    max-width: 593px;
+
+    margin: 0 7rem 0 0;
+}
+
+.assortment__title {}
+
+.assortment__content {
+    margin: 4rem 0 0 0;
+}
+
+.assortment__list-title {}
+
+.assortment__list {
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+    margin: 2rem 0 4rem 0;
+}
+
+.assortment__list-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.assortment__list-link {
+    max-width: 267px;
+    padding: 0 0 0 2.7rem;
+
+    position: relative;
+}
+
+.assortment__list-link::before {
+    content: "";
+    background: url("../img/cooperate/star.svg") center no-repeat;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+
+.assortment__image {}
+
+.assortment__image img {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+.assortment__image.first img {}
+
+.assortment__image.second img {
+    left: 1230px;
+}
+
+/* SLIDER */
+
+/* Слайдер */
+.slick-slider {
+    cursor: grabbing;
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+    display: flex;
+    min-width: 0;
+}
+
+.reviews .slick-track {
+    gap: 2rem;
+}
+
+/* Слайд */
+/* .slick-slide {} */
+
+.reviews__item.slick-slide {
+    flex: 1 1 0;
+}
+
+.slick-slide img {
+    display: block;
+    width: 100%;
+}
+
+.slick-initialized .slick-slide {}
+
+/* Слайд активный (показывается) */
+/* .slick-slide.slick-active {} */
+
+/* Слайд основной */
+/* .slick-slide.slick-current {} */
+
+/* Слайд по центру */
+/* .slick-slide.slick-center {} */
+
+/* Клонированный слайд */
+/* .slick-slide.slick-cloned {} */
+
+/* Стрелка */
+.slick-arrow {
+    margin-top: 3rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.2;
+    font-size: 1.6rem;
+    background-color: #94378c;
+    cursor: pointer;
+    height: fit-content;
+    border: 1px solid transparent;
+    padding: 1rem 1.5rem;
+}
+
+.slick-arrow:hover {
+    background-color: #e04ed4;
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+    font-size: 0;
+}
+
+.slick-arrow.slick-prev:before {
+    font-size: 1.6rem;
+    content: "<";
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+    font-size: 0;
+}
+
+.slick-arrow.slick-next:before {
+    font-size: 1.6rem;
+    content: ">";
+}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+    background-color: #fff;
+    border: 1px solid rgba(148, 55, 140, 0.3);
+    color: rgba(148, 55, 140, 0.3);
+}
+
+.slider__item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* REVIEWS */
+
+.reviews {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 4rem 0 0 0;
+}
+
+.reviews__item {
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(to bottom, #F5B9FF, #D3E4FF) border-box;
+    border-radius: 6rem;
+    border: 2px solid transparent;
+
+    width: 32%;
+    padding: 4rem;
+}
+
+.reviews__item.reviews__item-form {
+    background: #D3E2FF;
+}
+
+.reviews__item-title {
+    padding: 0 7.5rem 0 0;
+}
+
+.reviews__item:not(.opened) .reviews__item-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s linear;
+
+    margin: 2rem 0;
+
+    height: 168px;
+}
+
+.reviews__item-images {
+    display: flex;
+    gap: 2rem;
+
+    margin: 1rem 0 4rem 0;
+}
+
+.reviews__item-image {}
+
+.reviews__item-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.reviews__footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reviews__author-icon {
+    padding: 1rem 1.4rem;
+
+    border-radius: 6rem;
+}
+
+.reviews__author-icon.pink {
+    background-color: #FFD3FA;
+}
+
+.reviews__author-icon.blue {
+    background-color: #D3E2FF;
+}
+
+.reviews__author {}
