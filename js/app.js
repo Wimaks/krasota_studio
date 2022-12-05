@@ -12,6 +12,31 @@ $(document).ready(function () {
         }]
     });
 
+    $('.documents').slick({
+        appendArrows: $('.documents__slider-btns'),
+        slidesToShow: 4,
+        infinite: false,
+        // responsive: [{
+        //     breakpoint: 1230,
+        //     settings: {
+        //         slidesToShow: 3
+        //     }
+        // },
+        // {
+        //     breakpoint: 992,
+        //     settings: {
+        //         slidesToShow: 2
+        //     }
+        // },
+        // {
+        //     breakpoint: 550,
+        //     settings: {
+        //         slidesToShow: 1
+        //     }
+        // }
+        // ]
+    });
+
     //* BURGER ACTIVE
 
     $('.nav-toggle').on('click', function (event) {
@@ -36,6 +61,8 @@ $(document).ready(function () {
 
         $('.faq-accordion').toggleClass('active')
     })
+
+    $('textarea').autoResize();
 
 });
 
