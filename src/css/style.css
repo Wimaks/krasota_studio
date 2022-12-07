@@ -803,7 +803,7 @@ li {
 
     text-align: center;
 
-    width: 310px;
+    min-width: 310px;
 
     display: block;
 
@@ -816,7 +816,7 @@ li {
 }
 
 .budget .checkbox__label {
-    width: 200px;
+    min-width: 200px;
 }
 
 .form__footer .form__inputs {
@@ -846,7 +846,7 @@ li {
 }
 
 .form__footer {
-    padding: 3rem 3.5rem 3rem 6rem;
+    padding: 3rem 6rem;
 
     background: #FCF7F0;
     border-radius: 60px;
@@ -863,7 +863,7 @@ li {
 
 .form__footer .button {
     padding: 1.4rem 4.5rem 1.6rem;
-    width: 200px;
+    min-width: 200px;
 }
 
 .cost__image {
@@ -875,7 +875,7 @@ li {
 .unique {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: space-between;
     gap: 2rem;
 }
 
@@ -1788,7 +1788,21 @@ li {
         width: 95%;
     }
 
+    /* UNIQUE */
 
+    .unique__headers,
+    .unique__item:last-child {
+        width: 100%;
+    }
+
+    .unique__item {
+        width: 48%;
+        border-radius: 5rem;
+    }
+
+    .unique__item:last-child .unique__item-content {
+        width: auto;
+    }
 
 }
 
@@ -1855,6 +1869,10 @@ li {
         gap: 0;
     }
 
+    .cost .form {
+        padding: 0;
+    }
+
     .cost__content {
         width: 100%;
     }
@@ -1863,8 +1881,20 @@ li {
         display: none;
     }
 
+    .form__content .form__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .form__content .form__inputs {
+        margin: 0;
+        width: 100%;
+    }
+
     .cost .form__footer {
         position: unset;
+        padding: 3rem;
     }
 
     .form__footer .form__item {
@@ -1873,10 +1903,36 @@ li {
 
     .form__footer .form__inputs {
         margin: 0;
+        width: 100%;
+        justify-content: space-between;
     }
 
     .form__footer .form__input {
         width: 32%;
+    }
+
+    .form__input-checkbox {
+        width: 50%;
+    }
+
+    /* ASSORTMENT */
+
+    .assortment {
+        max-width: 755px;
+    }
+
+    .assortment__image {
+        display: none;
+    }
+
+    .assortment__list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .assortment__list-column {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
 }
@@ -1973,6 +2029,36 @@ li {
     .novelty .card__text {
         height: 78px;
     }
+
+    /* COST */
+
+    .form__footer .form__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .form__footer .form__inputs,
+    .form__footer .form__input {
+        max-width: 100%;
+    }
+
+    .form__footer .button {
+        min-width: 0;
+    }
+
+    .budget .checkbox__label,
+    .checkbox__label {
+        min-width: 0;
+    }
+
+    /* UNIQUE */
+
+    .unique__item,
+    .unique__item:last-child {
+        width: 100%;
+        border-radius: 4rem;
+    }
 }
 
 @media (max-width: 575px) {
@@ -1983,6 +2069,10 @@ li {
 
     .section__title {
         font-size: 4rem;
+    }
+
+    .item__title {
+        font-size: 1.8rem;
     }
 
     /* HEADER */
@@ -2109,6 +2199,43 @@ li {
 
     .novelty .card__price {
         padding: 1.4rem 2rem 1.6rem;
+    }
+
+    .form__inputs,
+    .form__inputs .form__inputs-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .form__input-checkbox,
+    .form__footer .form__input {
+        width: 100%;
+    }
+
+    /* COST */
+
+    .cost {
+        font-size: 1.5rem;
+    }
+
+    /* UNIQUE */
+
+    .unique__item {
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+
+    .unique__item-text {
+        display: none;
+    }
+
+    .unique__item-image {
+        min-width: 80px;
+    }
+
+    .unique__item-title {
+        max-width: 100%;
+        margin: 0;
     }
 
 }
