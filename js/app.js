@@ -5,11 +5,18 @@ $(document).ready(function () {
         appendArrows: $('.reviews__slider-btns'),
         slidesToShow: 3,
         responsive: [{
-            breakpoint: 992,
+            breakpoint: 1100,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 785,
             settings: {
                 slidesToShow: 1
             }
-        }]
+        }
+        ]
     });
 
     $('.documents').slick({
@@ -37,6 +44,32 @@ $(document).ready(function () {
         // ]
     });
 
+    $('.tariff').slick({
+        infinite: false,
+        slidesToShow: 4,
+        appendArrows: $('.tariff__slider-btns'),
+        responsive: [{
+            breakpoint: 1230,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 955,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 650,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    })
+
+    // 
+
     //* BURGER ACTIVE
 
     $('.nav-toggle').on('click', function (event) {
@@ -60,6 +93,12 @@ $(document).ready(function () {
         event.preventDefault()
 
         $('.faq-accordion').toggleClass('active')
+    })
+
+    $('.tariff__overflow').on('click', function (event) {
+        event.preventDefault()
+
+        $(this).closest('.tariff__item').toggleClass('opened')
     })
 
     $('textarea').autoResize();
