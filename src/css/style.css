@@ -1228,6 +1228,7 @@ li {
     display: flex;
     justify-content: space-between;
 
+    min-width: 0;
     margin: 4rem 0 0 0;
 }
 
@@ -1338,6 +1339,8 @@ li {
 
 .faq {
     display: flex;
+    justify-content: space-between;
+    gap: 5rem;
 }
 
 .faq__content {
@@ -1365,9 +1368,12 @@ li {
 }
 
 .faq-accordion__item.active {
-    background: linear-gradient(white, white) padding-box,
-        linear-gradient(to right, #FB2EFF, #005AE9) border-box;
     border-bottom: 1px solid transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-image:
+        linear-gradient(to right,
+            #FB2EFF, #005AE9) 0 1 100%;
 }
 
 .faq-accordion__item.active .faq-accordion__header::after {
@@ -1384,7 +1390,7 @@ li {
 } */
 
 .faq-accordion__header {
-    padding: 2rem 0;
+    padding: 2rem 3rem 2rem 0;
     position: relative;
 
     cursor: pointer;
@@ -1407,15 +1413,6 @@ li {
 
     transition: all 0.2s linear;
 }
-
-/* .faq-accordion__header::after {
-    top: 51%;
-} */
-
-/* .faq-accordion__header::before {
-    right: 1px;
-    transform: rotate(90deg) translateY(-50%);
-} */
 
 .faq-accordion__content {
     padding: 0 0 2rem 0;
@@ -1462,13 +1459,18 @@ li {
 }
 
 .faq__image {
-    margin: 0 0 0 10rem;
+    position: relative;
+    width: 50%;
+    display: block;
 }
 
 .faq__image img {
     display: block;
-    max-width: 100%;
-    height: auto;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* DELIVERY */
@@ -1483,10 +1485,16 @@ li {
 .map__block {
     position: relative;
     z-index: 1;
+    flex: 0 0 55%;
 }
 
 .map {
     display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .delivery__item {
@@ -1500,9 +1508,13 @@ li {
     list-style: none;
 
     display: flex;
+    flex-wrap: wrap;
     gap: 2.4rem;
 
     margin: 2rem 0 0 0;
+
+    height: 215px;
+    overflow: hidden;
 }
 
 .delivery__list-column {
@@ -1515,6 +1527,7 @@ li {
     padding: 0 0 0 2.7rem;
 
     position: relative;
+    width: 30%;
 }
 
 .delivery__list-link::before {
@@ -1599,11 +1612,17 @@ li {
     margin: 0 0 2rem 0;
 }
 
+.documents__slider-btns {
+    display: flex;
+    gap: 2rem;
+}
+
 /* ANSWERS */
 
 .answers {
     display: flex;
-    gap: 15.5rem;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
 .answers__content {
@@ -1622,10 +1641,11 @@ li {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    justify-content: space-between;
 }
 
 .form__answer-item {
-    width: 48%;
+    width: 46%;
 }
 
 .form__answer-input {
@@ -1635,6 +1655,7 @@ li {
     border-radius: 60px;
 
     text-align: center;
+    width: 100%;
 }
 
 .form__answer-input:focus,
@@ -1708,10 +1729,13 @@ li {
 
 .footer__inner {
     display: flex;
-    gap: 14.5rem;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
-/* .footer__left {} */
+.footer__left {
+    min-width: 306px;
+}
 
 .footer__logo {
     margin: 0 0 2rem 0;
@@ -1816,6 +1840,25 @@ li {
         width: auto;
     }
 
+    /* ANSWERS */
+
+    /* .answers__contacts {
+        padding: 4rem;
+    }
+
+    .contacts__image {
+        display: none;
+    } */
+}
+
+@media (max-width: 1100px) {
+    .answers__contacts {
+        padding: 4rem;
+    }
+
+    .contacts__image {
+        display: none;
+    }
 }
 
 @media (max-width: 993px) {
@@ -1937,8 +1980,74 @@ li {
         display: none;
     }
 
+    /* FAQ */
 
+    .faq-accordion {
+        max-width: 100%;
+        width: 80%;
+    }
 
+    .faq__image {
+        display: none;
+    }
+
+    /* DELIVERY */
+
+    .delivery {
+        flex-direction: column;
+    }
+
+    .map__block {
+        flex: none;
+        padding-bottom: 50%;
+    }
+
+    .map {
+        height: 100%;
+    }
+
+    /* ANSWERS */
+
+    .answers {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .answers__content {
+        max-width: 100%;
+    }
+
+    .form__answer-textarea {
+        height: 140px;
+    }
+
+    .form__answer-item {
+        width: 48%;
+    }
+
+    .contacts__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .contacts__item {
+        width: 31%;
+        margin: 0;
+    }
+
+    /* FOOTER */
+
+    .footer__main-body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footer__item {
+        width: 45%;
+    }
 }
 
 @media (max-width: 770px) {
@@ -2062,6 +2171,12 @@ li {
     .unique__item:last-child {
         width: 100%;
         border-radius: 4rem;
+    }
+
+    /* FAQ */
+
+    .faq-accordion {
+        width: 100%;
     }
 }
 
@@ -2286,6 +2401,100 @@ li {
 
     .price {
         font-size: 4rem;
+    }
+
+    /* FAQ */
+    .faq__title {
+        margin: 0 0 1rem 0;
+    }
+
+    .faq-accordion__item.active .faq-accordion__header::after {
+        right: 0;
+    }
+
+    /* DELIVERY */
+
+    .map__block {
+        display: none;
+    }
+
+    .delivery__list-link {
+        width: 100%;
+    }
+
+    .delivery__list.opened {
+        height: auto;
+    }
+
+    /* ANSWERS */
+
+    .answers__contacts {
+        border-radius: 20px;
+    }
+
+    .form__answer-item {
+        width: 100%;
+    }
+
+    .form__answer-item .button {
+        width: 100%;
+    }
+
+    .form__answer-input {
+        border-radius: 20px;
+    }
+
+    .form__answer-textarea {
+        height: 120px;
+        border-radius: 20px;
+    }
+
+    .contacts__content {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+
+    .contacts__item {
+        width: 100%;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        padding: 3rem 0 5rem;
+    }
+
+    .footer__inner {
+        position: relative;
+    }
+
+    .footer__logo {
+        margin: 0 0 10rem 0;
+    }
+
+    .footer__main {
+        position: absolute;
+        top: 35px;
+        left: 0;
+    }
+
+    .footer__main-law {
+        margin: 1rem 0;
+        text-align: right;
+    }
+
+    .footer__main-body {
+        gap: 1rem;
+    }
+
+    .footer__description {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .copyright {
+        border: 0;
     }
 }
 
