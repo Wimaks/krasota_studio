@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/popup.css">
     <title>Krasota Studio</title>
 </head>
 
@@ -22,19 +21,19 @@
                     <nav class="nav">
                         <div class="nav__item">
                             <div class="nav__link">
-                                <a href="#">О компании</a>
+                                <a href="#" data-scroll="#about">О компании</a>
                             </div>
                             <div class="nav__link">
-                                <a href="#">Товары</a>
+                                <a href="#" data-scroll="#products">Товары</a>
                             </div>
                             <div class="nav__link">
-                                <a href="#">Давайте сотрудничать</a>
+                                <a href="#" data-scroll="#cooperate">Давайте сотрудничать</a>
                             </div>
                             <div class="nav__link">
-                                <a href="#">Отзывы</a>
+                                <a href="#" data-scroll="#reviews">Отзывы</a>
                             </div>
                             <div class="nav__link">
-                                <a href="#">Контакты</a>
+                                <a href="#" data-scroll="#contacts">Контакты</a>
                             </div>
                         </div>
                         <div class="nav__item nav__item-info">
@@ -69,19 +68,19 @@
                         <nav class="burger-nav">
                             <div class="burger-nav__item">
                                 <div class="burger-nav__link">
-                                    <a href="#">О компании</a>
+                                    <a href="#" data-scroll="#about">О компании</a>
                                 </div>
                                 <div class="burger-nav__link">
-                                    <a href="#">Товары</a>
+                                    <a href="#" data-scroll="#products">Товары</a>
                                 </div>
                                 <div class="burger-nav__link">
-                                    <a href="#">Давайте сотрудничать</a>
+                                    <a href="#" data-scroll="#cooperate">Давайте сотрудничать</a>
                                 </div>
                                 <div class="burger-nav__link">
-                                    <a href="#">Отзывы</a>
+                                    <a href="#" data-scroll="#reviews">Отзывы</a>
                                 </div>
                                 <div class="burger-nav__link">
-                                    <a href="#">Контакты</a>
+                                    <a href="#" data-scroll="#contacts">Контакты</a>
                                 </div>
                             </div>
                             <div class="burger-nav__item burger-nav__item-info">
@@ -141,7 +140,7 @@
 
             <section class="section">
                 <div class="container">
-                    <h2 class="section__title">О компании</h2>
+                    <h2 class="section__title" id="about">О компании</h2>
                     <!-- /.section__title -->
                     <div class="about">
                         <div class="about__image">
@@ -184,7 +183,7 @@
 
             <section class="section">
                 <div class="container">
-                    <h2 class="section__title">Товары</h2>
+                    <h2 class="section__title" id="products">Товары</h2>
                     <div class="products">
                         <div class="products__item">
                             <h3 class="products__item-title item__title">Паста для шугаринга</h3>
@@ -277,7 +276,7 @@
 
             <section class="section">
                 <div class="container">
-                    <h2 class="section__title">Давайте сотрудничать</h2>
+                    <h2 class="section__title" id="cooperate">Давайте сотрудничать</h2>
                     <!-- /.section__title -->
                     <div class="cooperate">
                         <div class="cooperate__item left">
@@ -416,7 +415,7 @@
                                     </div>
                                     <div class="form__item form__item-rows">
                                         <p class="form__input-name item__title">Производство</p>
-                                        <div class="form__inputs production">
+                                        <div class="form__inputs form-production">
                                             <div class="form__inputs-row">
                                                 <div class="form__input-checkbox">
                                                     <input class="form__input" type="checkbox" id="production_1"
@@ -609,7 +608,7 @@
             <section class="section">
                 <div class="container">
                     <div class="header__group">
-                        <h2 class="reviews__title section__title">Отзывы</h2>
+                        <h2 class="reviews__title section__title" id="reviews">Отзывы</h2>
                         <!-- /.reviews__title section__title -->
 
                         <div class="reviews__slider-btns"></div>
@@ -617,6 +616,7 @@
                     </div>
                     <!-- /.header__group -->
                     <div class="reviews">
+
                         <div class="reviews__item">
                             <h3 class="reviews__item-title item__title">Прекрасное окрашивание волос</h3>
                             <p class="reviews__item-text">Хочу выразить благодарность прекрасному мастеру Виктории,
@@ -771,7 +771,46 @@
                                 <span class="reviews__author">Виталий</span>
                             </div>
                         </div>
-                        <div class="reviews__item reviews__item-form">3</div>
+                        <div class="reviews__item reviews__item-form">
+                            <h3 class="reviews__item-title item__title">Добавьте свой отзыв</h3>
+                            <form class="form__reviews" id="form__reviews" action="/">
+                                <div class="form__reviews-item">
+                                    <input type="text" class="form__reviews-input" placeholder="Ваше имя">
+                                </div>
+                                <div class="form__reviews-item">
+                                    <textarea class="form__reviews-textarea textarea" name="reviews-textarea"
+                                        placeholder="Текст отзыва"></textarea>
+                                </div>
+
+                                <h3 class="form__item-title item__title">Фото (Не более 3-х штук):</h3>
+                                <div class="form__reviews-files">
+                                    <div class="form__reviews-item">
+                                        <input class="form__reviews-file" type="file" accept=".jpg, .jpeg, .png"
+                                            name="reviews-file">
+                                        <div class="file__button">
+                                            <img src="src/img/reviews/add-image.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="form__reviews-item">
+                                        <input class="form__reviews-file" type="file" accept=".jpg, .jpeg, .png"
+                                            name="reviews-file">
+                                        <div class="file__button">
+                                            <img src="src/img/reviews/add-image.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="form__reviews-item">
+                                        <input class="form__reviews-file" type="file" accept=".jpg, .jpeg, .png"
+                                            name="reviews-file">
+                                        <div class="file__button">
+                                            <img src="src/img/reviews/add-image.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__reviews-item">
+                                    <button class="button">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                     <!-- /.reviews -->
                 </div>
@@ -1047,7 +1086,7 @@
             </section>
             <!-- /.section FAQ -->
 
-            <section class="section">
+            <section class="section section--production">
                 <div class="container">
                     <div class="header__group">
                         <h2 class="production__title section__title">Производство</h2>
@@ -1058,6 +1097,37 @@
                     <!-- /.header__group -->
                 </div>
                 <!-- /.container -->
+
+                <div class="production">
+                    <div class="production__item">
+                        <img src="src/img/production/1.jpg" alt="">
+                    </div>
+                    <div class="production__item">
+                        <img src="src/img/production/2.jpg" alt="">
+                    </div>
+                    <div class="production__item">
+                        <img src="src/img/production/3.jpg" alt="">
+                    </div>
+                    <div class="production__item">
+                        <img src="src/img/production/4.jpg" alt="">
+                    </div>
+                    <div class="production__item">
+                        <img src="src/img/production/5.jpg" alt="">
+                    </div>
+                    <div class="production__item">
+                        <img src="src/img/production/6.jpg" alt="">
+                    </div>
+                    <div class="production__item">
+                        <img src="src/img/production/7.jpg" alt="">
+                    </div>
+                    <div class="production__item">
+                        <img src="src/img/production/8.jpg" alt="">
+                    </div>
+                    <div class="production__item">
+                        <img src="src/img/production/9.jpg" alt="">
+                    </div>
+                </div>
+
             </section>
             <!-- /.section PRODUCTION -->
 
@@ -1239,7 +1309,7 @@
                                 </div>
                                 <div class="form__answer-item txta">
                                     <textarea class="form__answer-textarea textarea" name="textarea" type="text"
-                                        placeholder="Текст отзыва"></textarea>
+                                        placeholder="Сообщение"></textarea>
                                 </div>
                                 <div class="form__answer-item">
                                     <input class="button" type="button" value="Отправить">
@@ -1247,7 +1317,7 @@
                             </form>
                         </div>
                         <div class="answers__contacts">
-                            <h2 class="contacts__title section__title">Контакты</h2>
+                            <h2 class="contacts__title section__title" id="contacts">Контакты</h2>
                             <div class="contacts__content">
                                 <div class="contacts__image">
                                     <img src="src/img/contacts/img.png" alt="">
@@ -1335,54 +1405,58 @@
     <div class="popup">
         <div class="popup__body">
             <div class="popup__content">
-                <h2 class="popup__title">Оставьте свои данные для связи</h2>
-                <a href="#" class="popup__close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"
-                        class="to-svg">
-                        <rect width="1.97988" height="17.8189" rx="0.98994"
-                            transform="matrix(0.707109 0.707105 -0.707109 0.707105 12.6 0.000244141)" fill="#1298BD">
-                        </rect>
-                        </rect>
-                        <rect width="1.97988" height="17.8189" rx="0.98994"
-                            transform="matrix(-0.707109 0.707105 -0.707109 -0.707105 14 12.5999)" fill="#1298BD">
-                        </rect>
-                    </svg>
-                </a>
-                <div class="popup__form">
-                    <form action="#" id="form" class="popup__form-body">
-                        <div class="popup__form-item">
-                            <label for="formName" class="popup__form-label">Имя*:</label>
-                            <input id="formName" type="text" name="name" class="popup__form-input _req">
-                        </div>
-                        <div class="popup__form-item">
-                            <label for="formEmail" class="popup__form-label">E-mail*:</label>
-                            <input id="formEmail" type="text" name="email" class="popup__form-input _req _email">
-                        </div>
-                        <div class="popup__form-item">
-                            <div class="checkbox">
-                                <input id="formAgreement" checked type="checkbox" name="agreement"
-                                    class="checkbox__input _req">
-                                <label for="formAgreement" class="checkbox__label"><span>Отправляя форму,
-                                        вы соглашаетесь на обработку <a href="src/personal.pdf"
-                                            target="_blank">персональных данных</a></span></label>
-                            </div>
-                        </div>
-                        <button type="submit"
-                            class="button button-blue popup__form-button button-submit"><i>Отправить</i><span></span>
-                        </button>
-                    </form>
+                <div class="popup__image">
+                    <img src="src/img/popup.png" alt="">
                 </div>
+                <div class="popup__item">
+                    <h2 class="popup__title item__title">Заказать онлайн
+                        контрактное производство</h2>
+                    <a href="#" class="popup__close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                            class="to-svg">
+                            <rect width="1.97988" height="17.8189" rx="0.98994"
+                                transform="matrix(0.707109 0.707105 -0.707109 0.707105 12.6 0.000244141)"
+                                fill="#1298BD">
+                            </rect>
+                            </rect>
+                            <rect width="1.97988" height="17.8189" rx="0.98994"
+                                transform="matrix(-0.707109 0.707105 -0.707109 -0.707105 14 12.5999)" fill="#1298BD">
+                            </rect>
+                        </svg>
+                    </a>
+                    <div class="popup__form">
+                        <form class="form__answer" action="#" method="post">
+                            <div class="form__answer-item">
+                                <input class="form__answer-input" type="name" placeholder="Имя">
+                            </div>
+                            <div class="form__answer-item">
+                                <input class="form__answer-input" type="tel" placeholder="Телефон">
+                            </div>
+                            <div class="form__answer-item txta">
+                                <textarea class="form__answer-textarea textarea" name="textarea" type="text"
+                                    placeholder="Сообщение"></textarea>
+                            </div>
+                            <div class="form__answer-item">
+                                <input class="button" type="button" value="Отправить">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="js/slick.min.js"></script>
     <!-- <script src="js/form.js"></script> -->
     <!-- <script src="js/scroll.js"></script> -->
-    <script src="js/textarea.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/textarea.js"></script>
+
 </body>
 
 </html>

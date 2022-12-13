@@ -4,6 +4,7 @@ $(document).ready(function () {
         infinite: false,
         appendArrows: $('.reviews__slider-btns'),
         slidesToShow: 3,
+        // draggable: false,
         responsive: [{
             breakpoint: 1100,
             settings: {
@@ -42,6 +43,34 @@ $(document).ready(function () {
                 arrows: false
             }
         }
+        ]
+    });
+
+    $('.production').slick({
+        infinite: false,
+        appendArrows: $('.production__slider-btns'),
+        slidesToShow: 5,
+        // draggable: false,
+        responsive: [
+            {
+                breakpoint: 1441,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 1001,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false
+                }
+            }
         ]
     });
 
@@ -108,22 +137,39 @@ $(document).ready(function () {
         $('.delivery__list').toggleClass('opened')
     })
 
-    $('textarea').autoResize();
-
     $('.popup-link').on('click', function (event) {
         event.preventDefault();
 
         $('.popup').toggleClass('active')
-    });
+    })
 
-    // $('.popup__close').on('click', function (event) {
-    //     event.preventDefault();
+    $('.popup__close').on('click', function (event) {
+        event.preventDefault();
 
-    //     $('.popup').removeClass('active')
-    //     $('.popup__content').removeClass('_sending')
-    //     $('#form').trigger("reset");
-    //     $('.popup__form-input').removeClass('_error')
-    // })
+        $('.popup').removeClass('active')
+        $('.popup__content').removeClass('_sending')
+        $('#form').trigger("reset");
+        $('.popup__form-input').removeClass('_error')
+    })
 
+    //* SMOOTH SCROLL
+
+    $('[data-scroll]').on('click', function (event) {
+        event.preventDefault();
+
+        let $this = $(this),
+            blockId = $this.data('scroll'),
+            blockOffset = $(blockId).offset().top;
+
+        $('#nav a').removeClass('active');
+        $this.addClass('active');
+        $('.nav, .nav-toggle, .burger').removeClass('active'); // при скролле по нажатию в меню убирать меню и менять бургер
+
+        // $('.header').removeClass('fixed')
+
+        $('html, body').animate({
+            scrollTop: blockOffset
+        }, 500);
+    })
 });
 
