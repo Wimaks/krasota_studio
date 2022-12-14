@@ -1339,6 +1339,12 @@ li {
     height: auto;
 }
 
+.tariff__item.opened .item__overflow::before,
+.delivery__list.opened+.item__overflow::before {
+    transform: rotate(315deg);
+    top: 35%;
+}
+
 .tariff__list {
     list-style: none;
 
