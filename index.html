@@ -126,7 +126,7 @@
                             специально
                             для вашего бренда</h3>
                         <div class="intro__btns">
-                            <button class="button">Расчитать стоимость</button>
+                            <button class="button" data-scroll="#cost">Расчитать стоимость</button>
                             <button class="button button--white popup-link">Начать сотрудничество</button>
                         </div>
 
@@ -343,7 +343,7 @@
             <section class="section">
                 <div class="container">
                     <div class="novelty">
-                        <h2 class="novelty__title section__title">Новинки</h2>
+                        <h2 class="novelty__title section__title" id="novelty">Новинки</h2>
                         <div class="products__item">
                             <div class="products__item-content">
                                 <div class="card">
@@ -395,7 +395,7 @@
                 <div class="container">
                     <div class="cost">
                         <div class="cost__content">
-                            <h2 class="cost__title section__title">Расчёт стоимости производства</h2>
+                            <h2 class="cost__title section__title" id="cost">Расчёт стоимости производства</h2>
                             <form class="form" action="#" method="post">
                                 <div class="form__content">
                                     <div class="form__item">
@@ -462,18 +462,19 @@
                                     <div class="form__item">
                                         <p class="form__input-name item__title">Бюджет</p>
                                         <div class="form__inputs budget">
-                                            <div class="form__input-checkbox">
-                                                <input class="form__input" type="checkbox" id="budget_1">
-                                                <label class="checkbox__label" for="budget_1">300 000 - 500 000₽</label>
+                                            <div class="form__input-radio">
+                                                <input class="form__input" type="radio" id="budget_1" name="price">
+                                                <label class="radio__label" for="budget_1">300 000 - 500 000₽</label>
                                             </div>
-                                            <div class="form__input-checkbox">
-                                                <input class="form__input" type="checkbox" id="budget_2" checked>
-                                                <label class="checkbox__label" for="budget_2">500 000 - 1 000
+                                            <div class="form__input-radio">
+                                                <input class="form__input" type="radio" id="budget_2" name="price"
+                                                    checked>
+                                                <label class="radio__label" for="budget_2">500 000 - 1 000
                                                     000₽</label>
                                             </div>
-                                            <div class="form__input-checkbox">
-                                                <input class="form__input" type="checkbox" id="budget_3">
-                                                <label class="checkbox__label" for="budget_3">>1 000 000₽</label>
+                                            <div class="form__input-radio">
+                                                <input class="form__input" type="radio" id="budget_3" name="price">
+                                                <label class="radio__label" for="budget_3">>1 000 000₽</label>
                                             </div>
                                         </div>
                                     </div>
@@ -818,7 +819,7 @@
             <section class="section">
                 <div class="container">
                     <div class="header__group">
-                        <h2 class="tariff__title section__title">Тарифная сетка</h2>
+                        <h2 class="tariff__title section__title" id="tariff">Тарифная сетка</h2>
                         <!-- /.reviews__title section__title -->
 
                         <div class="tariff__slider-btns"></div>
@@ -1086,7 +1087,7 @@
             <section class="section section--production">
                 <div class="container">
                     <div class="header__group">
-                        <h2 class="production__title section__title">Производство</h2>
+                        <h2 class="production__title section__title" id="production">Производство</h2>
 
                         <div class="production__slider-btns"></div>
                         <!-- /.slider -->
@@ -1135,18 +1136,10 @@
                     <div class="delivery">
                         <div class="map__block">
                             <img class="map" src="src/img/delivery/map2.png" alt="Карта">
-                            <!-- <img class="map__img la" src="src/img/delivery/la.png" alt="">
-                            <img class="map__img msk" src="src/img/delivery/msk.png" alt="">
-                            <img class="map__img omsk" src="src/img/delivery/omsk.png" alt="">
-                            <img class="map__img perm" src="src/img/delivery/perm.png" alt="">
-                            <img class="map__img spb" src="src/img/delivery/spb.png" alt="">
-                            <img class="map__img surgut" src="src/img/delivery/surgut.png" alt="">
-                            <img class="map__img ufa" src="src/img/delivery/ufa.png" alt=""> -->
                         </div>
                         <div class="delivery__item">
                             <h3 class="delivery__item-title item__title">Города присутствия</h3>
                             <ul class="delivery__list">
-                                <!-- <div class="delivery__list-column"> -->
                                 <li class="delivery__list-link">Абакан</li>
                                 <li class="delivery__list-link">Альметьевск</li>
                                 <li class="delivery__list-link">Армавир</li>
@@ -1155,8 +1148,6 @@
                                 <li class="delivery__list-link">Алдан</li>
                                 <li class="delivery__list-link">Ангарск</li>
                                 <li class="delivery__list-link">Ардатов</li>
-                                <!-- </div> -->
-                                <!-- <div class="delivery__list-column"> -->
                                 <li class="delivery__list-link">Абакан</li>
                                 <li class="delivery__list-link">Альметьевск</li>
                                 <li class="delivery__list-link">Армавир</li>
@@ -1165,8 +1156,6 @@
                                 <li class="delivery__list-link">Алдан</li>
                                 <li class="delivery__list-link">Ангарск</li>
                                 <li class="delivery__list-link">Ардатов</li>
-                                <!-- </div> -->
-                                <!-- <div class="delivery__list-column"> -->
                                 <li class="delivery__list-link">Абакан</li>
                                 <li class="delivery__list-link">Альметьевск</li>
                                 <li class="delivery__list-link">Армавир</li>
@@ -1175,7 +1164,6 @@
                                 <li class="delivery__list-link">Алдан</li>
                                 <li class="delivery__list-link">Ангарск</li>
                                 <li class="delivery__list-link">Ардатов</li>
-                                <!-- </div> -->
                             </ul>
                             <p class="delivery__overflow item__overflow"><a href="#">Смотреть все</a></p>
                             <!-- /.faq__overflow -->
@@ -1382,12 +1370,12 @@
                     </div>
                     <div class="footer__main">
                         <div class="footer__main-body">
-                            <p class="footer__item">О компании</p>
-                            <p class="footer__item">Товары</p>
-                            <p class="footer__item">Тарифы</p>
-                            <p class="footer__item">Новинки</p>
-                            <p class="footer__item">Отзывы</p>
-                            <p class="footer__item">Производство</p>
+                            <p class="footer__item" data-scroll="#about">О компании</p>
+                            <p class="footer__item" data-scroll="#products">Товары</p>
+                            <p class="footer__item" data-scroll="#tariff">Тарифы</p>
+                            <p class="footer__item" data-scroll="#novelty">Новинки</p>
+                            <p class="footer__item" data-scroll="#reviews">Отзывы</p>
+                            <p class="footer__item" data-scroll="#production">Производство</p>
                         </div>
                         <div class="footer__main-law">Юридическая инфа</div>
                     </div>

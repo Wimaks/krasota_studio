@@ -175,7 +175,8 @@ li {
     background-clip: text;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.footer__item:hover {
     color: #94378c;
 }
 
@@ -801,7 +802,8 @@ li {
     display: none;
 }
 
-.checkbox__label {
+.checkbox__label,
+.radio__label {
     padding: 1.5rem 1.45rem;
 
     background: #D3E2FF;
@@ -816,12 +818,13 @@ li {
     cursor: pointer;
 }
 
-.form__input:checked+.checkbox__label {
+.form__input:checked+.checkbox__label,
+.form__input:checked+.radio__label {
     background: #005AE9;
     color: #fff;
 }
 
-.budget .checkbox__label {
+.budget .radio__label {
     min-width: 200px;
 }
 
@@ -1239,6 +1242,10 @@ li {
     position: relative;
 }
 
+.form__reviews-files .form__reviews-item {
+    width: 32%;
+}
+
 .form__reviews-input {
     font-family: 'Montserrat Alternates', sans-serif;
 
@@ -1533,11 +1540,10 @@ li {
 
 .faq__image img {
     display: block;
-    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 /* PRODUCTION */
@@ -1849,6 +1855,10 @@ li {
 
     font-size: 1.2rem;
     color: #002195;
+}
+
+.footer__item {
+    cursor: pointer;
 }
 
 .copyright {
